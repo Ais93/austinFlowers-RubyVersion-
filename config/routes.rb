@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'home_pages/home'
+  root 'home_pages#home'
 
   get 'home_pages/terms'
 

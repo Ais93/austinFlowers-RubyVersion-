@@ -1,2 +1,148 @@
-<h1>HomePages#home</h1>
-<p>Find me in app/views/home_pages/home.html.erb</p>
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Austin Flowers </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:700italic,700,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	</head>	
+	<html>
+	<body>
+		<ul class="navbar">
+				<li><a href='home.html'>Home</a></li>
+				<div class="dropdown">
+				<span><li><a id="shop" href='#'>Shop</a></li></span>
+					<div class="drop-links">
+						<a href='#occ'>Occasions</a>
+						<a href='#'>Bouquets</a>
+						<a href='customFlowerPage.html'>Custom</a>
+					</div>
+				</div>
+				<li><a href='#about'>About</a></li>
+				<li><a href='#contact'>Contact</a></li>
+				<li><a id="signIn" href='#'>Sign In</button></a></li>
+		</ul>
+		<!--W3Schools Example on Modal Boxes http://www.w3schools.com/howto/howto_css_modals.asp -->
+		<div id="login" class="modal">
+			<div class="formBox">
+				<div id="tabBox">
+					<a href="#" id="si" class="tab">Sign In</a>
+					<a href="#" id="su" class="tab">Register</a>
+				</div>
+				<form id = "lForm" name="lForm" action="">	
+					<input class = "formInput" name="email" type="email" placeholder="Email" value="">
+					<input class = "formInput" name="psw" type="password" placeholder="Password" value="">
+					<button onclick="validate()">Sign In</button>
+				</form>
+
+				<form id="rForm" name="rForm" action="">
+					<input class = "formInput" name="fullname" type="text" placeholder="Full Name" value="">
+					<textarea class = "formInput" name="address" type="textarea" rows="3" cols="10" placeholder="Delivery Address" value=""></textarea>
+					<input class = "formInput" name="email" type="email" placeholder="Email" value="">
+					<input class = "formInput" name="psw" type="password" placeholder="Create Password">
+					<button onclick="validate2()">Register</button>
+				</form>
+
+			</div>
+
+		</div>
+
+		<div class= "section image f1">
+			<div class="content">
+					<img src="../images/austin.png"/>
+			</div>
+		</div>
+
+
+		<div class = "section writing" id="occ">
+			<div class="content">
+				<h3>Occassions</h3>
+				<div class="circle" id="circle1"><h1><a href="anniversary.html">Anniversary</a></h1></div>
+				<div class="circle" id="circle2"><h1><a href="funeral.html">Funeral</a></h1></div>
+			</div>
+		</div>
+
+
+
+		<div class="section image f2">
+			<div class="content">
+				<h1>Exquisite, fresh bouquets arranged every day </h1>
+			</div>
+		</div>
+
+		<div class="section writing" id="about">
+			<div class="content">
+				<h3>About</h3>
+				<p>Austin Flowers is a new flower company based at Mayer Square in the heart of Dublin city centre. Our company was borne out of two projects which we were required course work at the National College of Ireland for both a module in Web Design, and also another one in Sever Side Webtechnologies.</p>
+
+				<p>Even though Austin Flowers was founded in order to fulfil course work requirements, the course also fulfills our teams love of both flowers, and also hilarious and completely original puns. By combining they two of these we know that we can deliver professional and afordable flowers straight to your front door. </p> 
+
+				<p>At Austin Flowers we specialise in a number of key flower areas. This is mainly bouquests. We provide a number of different bouquet options. The first of which is bouquets for Funeral, and Anniversary events. Secondly we have premade bouquests for when you're not quite sure what you're after. Lastly create your own bouquet with our custom bouquet feature. </p>
+
+			</div>
+		</div>
+
+		<div class="section image f3">
+			<div class="content">
+				<h1>Get creative and arrange your own bouquet, unique to you</h1>
+			</div>
+		</div>
+
+		<div class="section writing" id="contact">
+			<div class="content">
+				<h3>Contact</h3>
+				<p>Austin Flowers is located at No. 1 Mayer Square, Dublin 1. We're open 9-5 Monday to Friday. Call us on 01 2232445, or send us a message on Facebook or Twitter (which you'll find at the bottom of the page).</p>
+
+				<p>Can't find what your're looking for? Don't worry we are here to help. Give us a call on 01 2232445, or drop us a message via Facebook or Twitter. We are always looking to hear what you have to say, and are interested in any ways you feel we could improve our site.</p>
+			</div>
+		</div>
+
+		<footer>
+			<div id="footerPic">
+					<img src="../images/austin.png">
+				</div>
+
+				<div class="columns">
+						<h3>Connect With Us</h3>
+						<a href="https://www.facebook.com/Austin-Flowers-178449139192413/" target="_blank">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="https://twitter.com/yeahhhhh_baby" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+				</div>
+
+				<div class="columns">
+					<h3> Links</h3>
+					<ul>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Site Map</a></li>
+						<li>Profile</li>
+					</ul>
+				</div>
+
+				<div class="columns">
+					<h3> The Team</h3>
+					<ul>
+						<li>Aisling</li>
+						<li>Joe</li>
+						<li>Tom</li>
+					</ul>
+				</div>
+
+
+		</footer>
+	
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<script src="../javascript/main.js"></script>
+
+
+
+</body>
+
+</html>
