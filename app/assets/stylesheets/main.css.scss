@@ -1,0 +1,330 @@
+/*rails tutorial on nesting - using sass to tidy up css */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar{
+ 	padding: 10px 0;
+ 	width: 100%;
+ 	margin:0 auto;
+ 	text-align: center;
+ 	background-color: transparent;
+ 	position:fixed;
+ 	li {
+    	display: inline;
+    	padding: 0 30px;
+    	position: relative;
+    	z-index: 3;
+    	a {
+			text-decoration: none;
+			font-family: 'Lato';
+			font-size: 23px;
+			color: #FFFCE7;
+			font-weight: 300;
+			&:hover {
+				color: #9CCAA6;
+				text-decoration: underline;
+			}
+		}	
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.drop-links {
+	display: none;
+	position: absolute;
+	a {
+		color: #FFFCE7;
+		font-family: 'Lato';
+		font-size: 20px;
+		padding: 5px 17px;
+		text-decoration: none;
+		display: block;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		background-color: transparent;
+		&:hover {
+			color: #9CCAA6;
+			text-decoration: underline;
+		}
+	}
+}
+
+/* W3Schools Example on Modal Boxes http://www.w3schools.com/howto/howto_css_modals.asp */
+.modal {
+	display:none;
+	position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); 
+}
+/* Code found on http://www.sanwebe.com/2014/08/css-html-forms-designs
+	Form Style 8
+	Author: Saran Chamling; */
+.formBox {
+    font-family: "Open Sans Condensed";
+    width:650px;
+    padding: 30px;
+    background-color: #FFFFFF;
+    margin: 110px auto;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.22);
+}
+
+
+#tabBox{
+	background-color: #4D4D4D;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+	a {
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: "Lato";
+		color: #797979;
+		font-size: 18px;
+		font-weight: 100;
+		&:hover {
+			color: #9CCAA6;
+			text-decoration: underline;
+		}
+	}
+}
+
+#su {
+	padding-left: 20px;
+	border-left: 3px solid;
+}
+
+#si {
+	padding-right: 20px;
+}
+
+#rForm {
+	display:none;
+}
+
+.formInput {
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	margin-bottom: 10px;
+	border:none;
+	border-bottom: 2px solid #ddd;
+	background: transparent;
+	font-family: "Lato";
+	font-size: 20px;
+	height: 40px;
+}
+
+#formBox button {
+	box-shadow: 0px 1px 0px 0px black;
+	background-color: #4D4D4D;
+	border: 1px solid #4D4D4D;
+	display: inline-block;
+	cursor: pointer;
+	color: white;
+	font-family: "Lato";
+	font-size: 14px;
+	padding: 12px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.content {
+  max-width: 960px;
+  margin:0 auto;
+}
+
+.section.writing {
+	padding: 60px;
+	margin: auto;
+	background-color: white;
+	height: 600px;
+}
+
+.section {	
+	h3 {
+		margin-bottom: 40px;
+		font-family: "Mouse Memoirs";
+		font-size: 50px;
+		text-align: center;
+		color: #D27D65;
+	}
+	p {
+		margin-bottom: 40px;
+		font-family: "Lato";
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+.section#contact {
+	height: 400px;
+}
+
+.section.image {
+		width:100%;
+		height: 500px;
+		padding-top: 200px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		h1 {
+			color:#FFFCE7;
+			font-family: "Playfair Display";
+			font-size: 60px;
+			font-weight: 700;
+			font-style: italic;
+			text-align: center;
+			min-width: 960px;
+			padding-top: 100px;
+			margin: auto;
+			text-shadow: 2px 2px #737373;
+		}
+		img {
+			position: relative;
+			bottom:10px;
+			left:269px;
+			height: 295px;
+			width: auto;
+		}
+}
+
+.section.image.f1 {
+	background-image: 
+	url("../assets/headflower.png");
+}
+
+.section.image.f2 {
+	background-image: 
+	linear-gradient(
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.5)
+		),
+	url("../assets/midflowers.jpeg");
+}
+	
+.section.image.f3 {
+	background-image: 
+	linear-gradient(
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.5)
+		),
+	url("../assets/endflowers.jpg");
+}
+
+
+.circle {
+	border: 1px solid white;
+	width:425px;
+	height: 425px;
+	display: inline-block;
+	margin: 20px 15px;
+	border-radius: 100%;
+	position: static;
+	text-align: center;
+	&:hover h1 a{
+		text-decoration: underline;
+		color: #9CCAA6;
+		font-size: 30px;
+	}
+	h1 {
+		padding-top:150px;
+		a{
+			text-decoration: none;
+			font-family: "Lato";
+			color: #FFFCE7;
+			text-shadow: 2px 2px black;
+		}
+	}
+}
+
+#circle1{
+	background: 
+	url(../assets/anni.jpg) repeat scroll 0 0 / cover;
+}
+
+#circle2{
+	background: 
+	url(../assets/funeral.jpg) repeat scroll 0 0 / cover;
+	margin-left: 50px;
+}
+
+footer {
+	font-family: "Lato";
+	background-color: #D27D65;
+	opacity: 0.7;
+	width:100%;
+	height:200px;
+	box-shadow: 36px 24px 82px 0px rgba(0,0,0,0.75);
+	position: absolute;
+	h3 { 
+		font-size:25px;
+		color:#FFFCE7; 
+		text-decoration: none;
+		margin: 0;
+		padding-bottom: 10px;
+		font-style: italic;
+	}
+	.columns {
+		text-align: center;
+		margin-right: 50px;
+		margin-top: 20px;
+		float: right;
+	}
+	a {
+		text-decoration: none;
+		padding: 20px;
+		color: #FFFCE7;
+		font-size: 50px;
+	}
+	ul {
+		margin: 0;
+		list-style: none;
+		padding-right: 30px;
+		color:#FFFCE7;
+		font-size: 20px;
+		a {
+			margin: 0;
+			list-style: none;
+			padding-right: 30px;
+			color:#FFFCE7;
+			font-size: 20px;
+			&:hover {
+				color: #9CCAA6;
+				text-decoration: underline;
+			}
+		}
+		li {
+			padding-bottom: 5px;
+		}
+	}
+}
+
+ #footerPic img {
+	height: 150px;
+	top: 20px;
+	left: 40px;
+	position: relative;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+

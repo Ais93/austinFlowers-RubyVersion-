@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'home_pages#home'
+  root            'home_pages#home'
 
-  get 'home_pages/terms'
+  get 'terms' =>  'home_pages#terms'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
