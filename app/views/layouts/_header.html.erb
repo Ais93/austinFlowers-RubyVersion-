@@ -5,14 +5,14 @@
 				<div class="dropdown">
 				<span><li><a id="shop" href='#'>Shop</a></li></span>
 					<div class="drop-links">
-						<%= link_to "Occassions", '#' %>
-						<%= link_to "Bouquets", '#' %>
-						<%= link_to "Custom", '#' %>
+						<%= link_to "Occassions", root_path(anchor: 'occ') %>
+						<%= link_to "Bouquets", bouquet_path %>
+						<%= link_to "Custom", custom_path %>
 					</div>
 				</div>
 				<li><%= link_to "About", root_path(anchor: 'about') %></li>
 				<li><%= link_to "Contact", root_path(anchor: 'contact') %></li>
-				<li><a id="signIn" href='#'>Sign In</button></a></li>
+				<li><a class="signIn" href='#'>Sign In</button></a></li>
 		</ul>
 		<!--W3Schools Example on Modal Boxes http://www.w3schools.com/howto/howto_css_modals.asp -->
 		<div id="login" class="modal">

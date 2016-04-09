@@ -1,0 +1,2 @@
+module FlowerPagesHelper
+end

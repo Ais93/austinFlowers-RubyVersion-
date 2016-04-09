@@ -1,0 +1,117 @@
+.bouquet{
+	padding-top: 40px;
+	padding-left:110px;
+ 	width:860px;
+ 	height: 500px;
+ 	margin:auto;
+}
+
+ .bouquet ul {
+	 list-style:none;
+	
+ }
+ .bouquet li {
+ 	height: 250px;
+ 	width: 150px;
+	float:left;
+	margin: 10px;
+	margin-bottom: 50px;
+  }
+  
+  .bouquet img {
+	  display:block;
+	  
+}
+
+.anniversary{
+	padding-top: 40px;
+	padding-left:110px;
+ 	width:860px;
+ 	height: 500px;
+ 	margin:auto;
+}
+
+.anniversary ul {
+	 list-style:none;
+}
+ 
+.anniversary li {
+ 	height: 250px;
+ 	width: 150px;
+	float:left;
+	margin: 10px;
+	margin-bottom: 50px;
+}
+  
+.anniversary img {
+	  display:block;
+}
+
+.funeral{
+	padding-top: 40px;
+	padding-left:110px;
+ 	width:860px;
+ 	height:500px;
+ 	margin:auto;
+}
+	
+.funeral ul {
+	 list-style:none;
+}
+ 
+.funeral li {
+	height: 250px;
+ 	width: 150px;
+	float:left;
+	margin: 10px;
+	margin-bottom: 50px;
+}
+  
+.funeral img {
+	display:block;
+}
+  
+  
+.btn-cart {
+	  display:block;
+	  margin:auto;
+	  
+}
+  
+.cart ul {
+	  list-style:none;
+}
+  
+.contenthover { 
+  	padding:20px 20px 10px 20px;
+}
+
+.contenthover, .contenthover h3, contenthover a { 
+ 	color:#fff; 
+}
+ 
+.contenthover h3,.contenthover p { 
+ 	font-size: 12px; 
+ 	font-family: Calibri; 
+ 	float:centre; 
+ 	color:pink; 
+ 	margin:0 0 10px 0; 
+ 	line-height:1.4em; 
+ 	padding:0;
+}
+
+.contenthover a.mybutton { 
+ 	display:block; 
+ 	float:centre;
+ 	padding:5px 10px; 
+ 	background:#fff; 
+ 	color:#000000;
+ 	-moz-border-radius: 4px;
+ 	-webkit-border-radius: 4px;
+ 	border-radius: 4px;
+ }
+ 
+.contenthover a.mybutton:hover {
+ 	background:#ca4577;
+ }
+

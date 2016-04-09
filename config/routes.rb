@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  root            'home_pages#home'
+  get 'users/new'
 
-  get 'terms' =>  'home_pages#terms'
+  root                    'home_pages#home'
+  
+  get 'bouquet'     =>    'flower_pages#bouquet'
+
+  get 'anniversary' =>    'flower_pages#anniversary'
+
+  get 'custom'      =>    'flower_pages#custom'
+
+  get 'funeral'     =>    'flower_pages#funeral'
+
+  get 'terms'       =>    'home_pages#terms'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
