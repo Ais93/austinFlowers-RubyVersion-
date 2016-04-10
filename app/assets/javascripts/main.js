@@ -272,7 +272,59 @@ signin.onclick = function() {
 			overlay_opacity:0.8
 		});
 
-
+//jquery and javascript for individual flower pop ups
+$('#readmore1').click(function(){
+			$('#words1').fadeIn();
+		});
+		
+		$('#readmore2').click(function(){
+			$('#words2').fadeIn();
+		});
+		
+		$('#readmore3').click(function(){
+			$('#words3').fadeIn();
+		});
+		
+		$('#readmore4').click(function(){
+			$('#words4').fadeIn();
+		});
+		
+		$('#readmore5').click(function(){
+			$('#words5').fadeIn();
+		});
+		
+		$('#readmore6').click(function(){
+			$('#words6').fadeIn();
+		});
+		
+		$('#readmore7').click(function(){
+			$('#words7').fadeIn();
+		});
+		
+		$('#readmore8').click(function(){
+			$('#words8').fadeIn();
+		});
+		
+		$('#readmore9').click(function(){
+			$('#words9').fadeIn();
+		});
+		
+		$('#readmore10').click(function(){
+			$('#words10').fadeIn();
+		});
+		
+		$('#readmore11').click(function(){
+			$('#words11').fadeIn();
+		});
+		
+		$('#readmore12').click(function(){
+			$('#words12').fadeIn();
+		});
+		
+		//close pop ups
+		$( ".close" ).click(function() {
+       		$('.modal').hide();
+    	});
 
 
 
