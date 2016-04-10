@@ -1,41 +1,17 @@
-.bouquet{
+/*CSS for the flower pages : bouquet anniversary funeral */
+.purchase{
 	padding-top: 40px;
 	padding-left:110px;
  	width:860px;
- 	height: 500px;
+ 	height: 400px;
  	margin:auto;
 }
 
- .bouquet ul {
-	 list-style:none;
-	
- }
- .bouquet li {
- 	height: 250px;
- 	width: 150px;
-	float:left;
-	margin: 10px;
-	margin-bottom: 50px;
-  }
-  
-  .bouquet img {
-	  display:block;
-	  
-}
-
-.anniversary{
-	padding-top: 40px;
-	padding-left:110px;
- 	width:860px;
- 	height: 500px;
- 	margin:auto;
-}
-
-.anniversary ul {
-	 list-style:none;
+.purchase ul {
+	list-style:none;
 }
  
-.anniversary li {
+.purchase li {
  	height: 250px;
  	width: 150px;
 	float:left;
@@ -43,31 +19,7 @@
 	margin-bottom: 50px;
 }
   
-.anniversary img {
-	  display:block;
-}
-
-.funeral{
-	padding-top: 40px;
-	padding-left:110px;
- 	width:860px;
- 	height:500px;
- 	margin:auto;
-}
-	
-.funeral ul {
-	 list-style:none;
-}
- 
-.funeral li {
-	height: 250px;
- 	width: 150px;
-	float:left;
-	margin: 10px;
-	margin-bottom: 50px;
-}
-  
-.funeral img {
+.purchase img {
 	display:block;
 }
   
@@ -115,3 +67,24 @@
  	background:#ca4577;
  }
 
+#words1,#words2,#words3,#words4,
+#words5,#words6,#words7,#words8,
+#words9,#words10,#words11,#words12{
+	color:white;
+	font-size: 20px;
+	text-align: center;
+	font-family: "Lato";
+}
+
+p {
+	margin: 10px 90px;
+}
+
+.inset {
+	margin: 10px auto;
+	width:300px;
+	height:300px;
+	border-style: inset;
+	border-width: 10px;
+	border-color: pink;
+}

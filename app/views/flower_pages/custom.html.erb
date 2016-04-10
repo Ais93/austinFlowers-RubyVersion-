@@ -1,2 +1,218 @@
-<h1>FlowerPages#custom</h1>
-<p>Find me in app/views/flower_pages/custom.html.erb</p>
+<!DOCTYPE HTML>
+ <html>
+  <head>
+	<meta charset="UTF-8">
+	<title>Austin Flowers | Custom</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:700italic,700,300' rel='stylesheet' type='text/css'>
+	
+	<style>
+		
+    table {
+    	display: inline-block;
+    	text-align: center;
+    	font-family: "Lato";
+    }
+	
+    .flowerform {
+     	width:385px;
+      	margin:0 auto;
+     }
+
+    .instructions {
+    	text-align: center;
+     	font-family: "Lato";
+     	padding-top: 50px;
+    	margin:auto;
+    }
+
+    #dragX, #dragY {
+     	float:left; 
+     	width:150px; 
+     	height:75px; 
+     	margin:10px;
+     	border:3px solid #FFFCE7;
+    }
+
+    #dragX img,#dragY img {
+    	width:150px;
+    	height: 75px;
+    }
+    
+    </style>
+    
+   <script type="text/javascript">
+    function dragStart(ev) {
+     ev.dataTransfer.effectAllowed='move';
+     ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+     ev.dataTransfer.setDragImage(ev.target,0,0);
+            
+     return true;
+         }
+   
+   
+    function dragEnter(ev) {
+     event.preventDefault();
+     return true;
+         }
+         
+    function dragOver(ev) {
+     return false;
+         }
+         
+    function dragDrop(ev) {
+     var src = ev.dataTransfer.getData("Text");
+     ev.target.appendChild(document.getElementById(src));
+     ev.stopPropagation();
+     return false;
+         }
+
+      </script>
+  </head>
+   
+
+   	<ul class="navbar" id="navcolour">
+				<li><a href='index.html'>Home</a></li>
+				<div class="dropdown">
+				<span><li><a id="shop" href='#'>Shop</a></li></span>
+					<div class="drop-links"  id="dropcolour">
+						<a href='index.html#occ'>Occasions</a>
+						<a href='bouquet.html'>Bouquets</a>
+						<a href='customFlowerPage.html'>Custom</a>
+					</div>
+				</div>
+				<li><a href='index.html#about'>About</a></li>
+				<li><a href='index.html#contact'>Contact</a></li>
+				<li><a id="signIn" href='#'>Sign In</button></a></li>
+	</ul>
+		<!--W3Schools Example on Modal Boxes http://www.w3schools.com/howto/howto_css_modals.asp -->
+		<div id="login" class="modal">
+			<div class="formBox">
+				<div id="tabBox">
+					<a href="#" id="si" class="tab">Sign In</a>
+					<a href="#" id="su" class="tab">Register</a>
+				</div>
+				<form id = "lForm" name="lForm" action="">	
+					<input class = "formInput" name="email" type="email" placeholder="Email" value="">
+					<input class = "formInput" name="psw" type="password" placeholder="Password" value="">
+					<button onclick="validate()">Sign In</button>
+				</form>
+
+				<form id="rForm" name="rForm" action="">
+					<input class = "formInput" name="fullname" type="text" placeholder="Full Name" value="">
+					<textarea class = "formInput" name="address" type="textarea" rows="3" cols="10" placeholder="Delivery Address" value=""></textarea>
+					<input class = "formInput" name="email" type="email" placeholder="Email" value="">
+					<input class = "formInput" name="psw" type="password" placeholder="Create Password">
+					<button onclick="validate2()">Register</button>
+				</form>
+
+			</div>
+
+		</div>
+
+	<div class="instructions">
+		<p><strong>Please drag the flowers you want into their corresponding right hand box.</strong></p>
+
+		<p> If you make a mistake simply press the "Reset" button. When you're finished, click "Submit".</p>
+		
+	</div>
+	<div class="flowerform">
+	<form>
+		<table>
+			<tr>
+				<td><div id="dragX">
+				<img src="../images/flower_tulip.jpg" draggable="true"  ondragstart="return dragStart(event)" id="drag1" >
+				</div>
+		
+				<div id="dragY" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div></td>
+			</tr>
+     
+			<tr>
+				<td><div id="dragX">
+				<img src="../images/roseFlower.jpg" draggable="true"  ondragstart="return dragStart(event)" id="drag2">
+				</div>
+    
+				<div id="dragY" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div></td>
+			</tr>
+			
+			<tr>
+				<td><div id="dragX">
+				<img src="../images/daisyFlower.jpg" draggable="true"  ondragstart="return dragStart(event)" id="drag3" >
+				</div>
+    
+				<div id="dragY" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div></td>
+			</tr>
+     
+			<tr>
+				<td><div id="dragX">
+				<img src="../images/daffodilFlower.png" draggable="true"  ondragstart="return dragStart(event)" id="drag4" >
+				</div>
+    
+				<div id="dragY" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div></td>
+			</tr>
+			
+			<tr>
+				<td><div id="dragX">
+				<img src="../images/sunflowerFlower.jpg" draggable="true"  ondragstart="return dragStart(event)" id="drag5" >
+				</div>
+				
+				<div id="dragY" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div></td>
+   
+			</tr>
+			
+			<tr>
+				<td><div id="dragX">
+				<img src="../images/poppyFlower.jpg" draggable="true"  ondragstart="return dragStart(event)" id="drag6" >
+				</div>
+    
+				<div id="dragY" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div></td>
+			</tr>
+			
+			<tr>
+			<td><input type="submit" id="submitBtn" value="Submit" />
+				<input type="button" id="resetBtn" value="Reset" />
+			</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+	<footer>
+			<div id="footerPic">
+					<img src="../images/austin.png">
+				</div>
+
+				<div class="columns">
+						<h3>Connect With Us</h3>
+						<a href="https://www.facebook.com/Austin-Flowers-178449139192413/" target="_blank">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="https://twitter.com/yeahhhhh_baby" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+				</div>
+
+				<div class="columns">
+					<h3> Links</h3>
+					<ul>
+						<li><a href="termsAndConditions.html">Terms & Conditions</a></li>
+						<li><a href="#">Site Map</a></li>
+					</ul>
+				</div>
+
+				<div class="columns">
+					<h3> The Team</h3>
+					<ul>
+						<li>Aisling</li>
+						<li>Joe</li>
+						<li>Tom</li>
+					</ul>
+				</div>
+		</footer>
+<!--jquery and javascript links-->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../main.js"></script>
+
+</body>
+</html>
