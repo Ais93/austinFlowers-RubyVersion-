@@ -5,14 +5,20 @@
   <%= devise_error_messages! %>
   
   <div class="formInput">
-    <%= f.label :fullName %><br />
-    <%= f.email_field :fullName, autofocus: true %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  
+  <div class="formInput">
+    <%= f.label :delivery_address %><br />
+    <%= f.text_field :delivery_address, autofocus: true %>
   </div>
 
   <div class="formInput">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+  
 
   <div class="formInput">
     <%= f.label :password %>
