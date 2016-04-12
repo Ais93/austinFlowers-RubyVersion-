@@ -12,29 +12,12 @@
 				</div>
 				<li><%= link_to "About", root_path(anchor: 'about') %></li>
 				<li><%= link_to "Contact", root_path(anchor: 'contact') %></li>
-				<li><a class="signIn" href='#'>Sign In</button></a></li>
+				<% if user_signed_in? %>
+				<li><%= link_to 'Profile', edit_user_registration_path %></li>
+				<li><%= link_to'Logout', destroy_user_session_path %></li>
+				<% else %>
+				<li><%= link_to 'Register', new_user_registration_path %></li>
+				<li><%= link_to 'Sign In',	new_user_session_path %></li>
+				<% end %>
 		</ul>
 		<!--W3Schools Example on Modal Boxes http://www.w3schools.com/howto/howto_css_modals.asp -->
-		<div id="login" class="modal">
-			<div class="formBox">
-				<div id="tabBox">
-					<a href="#" id="si" class="tab">Sign In</a>
-					<a href="#" id="su" class="tab">Register</a>
-				</div>
-				<form id = "lForm" name="lForm" action="">	
-					<input class = "formInput" name="email" type="email" placeholder="Email" value="">
-					<input class = "formInput" name="psw" type="password" placeholder="Password" value="">
-					<button onclick="validate()">Sign In</button>
-				</form>
-
-				<form id="rForm" name="rForm" action="">
-					<input class = "formInput" name="fullname" type="text" placeholder="Full Name" value="">
-					<textarea class = "formInput" name="address" type="textarea" rows="3" cols="10" placeholder="Delivery Address" value=""></textarea>
-					<input class = "formInput" name="email" type="email" placeholder="Email" value="">
-					<input class = "formInput" name="psw" type="password" placeholder="Create Password">
-					<button onclick="validate2()">Register</button>
-				</form>
-
-			</div>
-
-		</div>

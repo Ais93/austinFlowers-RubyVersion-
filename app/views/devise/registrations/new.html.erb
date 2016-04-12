@@ -1,0 +1,29 @@
+<div class ="formBox">
+<h1>Register New Account</h1>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="formInput">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="formInput">
+    <%= f.label :password %>
+    <br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="formInput">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+
+</div>
