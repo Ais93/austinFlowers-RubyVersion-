@@ -13,11 +13,11 @@ body {
  	background-color: #D27D65;
 	opacity: 0.7;
  	position:fixed;
+ 	z-index: 5;
  	li {
     	display: inline;
     	padding: 0 30px;
     	position: relative;
-    	z-index: 5;
     	a {
 			text-decoration: none;
 			font-family: 'Lato';
@@ -36,12 +36,13 @@ body {
 .dropdown {
 	position: relative;
 	display: inline-block;
+	z-index: 5;
 }
 
 .drop-links {
 	display: none;
 	position: absolute;
-	z-index: 5;
+	background-color: #D27D65;
 	a {
 		color: #FFFCE7;
 		font-family: 'Lato';
@@ -150,7 +151,10 @@ body {
    	}
    	::-webkit-input-placeholder {
    		color: #FFFCE7;
-}
+	}
+	button {
+		float:right;
+	}
 }
 
 /*home page css*/
