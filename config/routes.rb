@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admins
-  devise_for :users
+  devise_for :users, { sessions: "users/sessions" }
 
   root                    'home_pages#home'
+  
+  match '/users',   to: 'user#index',   via: 'get'
   
   get 'bouquet'     =>    'flower_pages#bouquet'
 

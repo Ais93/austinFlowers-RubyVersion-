@@ -3,8 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
-
+#Log in and registration, authentication
 gem 'devise'
+# Create users
+gem 'faker',                '1.4.2'
+# Only allows certain number of users on each page (Michael Hartl - Ruby on Rails Tutorial)
+gem 'will_paginate',           '3.0.7'
 # Add bootsrap
 gem 'bootstrap-sass',       '3.2.0.0'
 # Use sqlite3 as the database for Active Record

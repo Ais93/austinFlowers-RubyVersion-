@@ -1,0 +1,18 @@
+<!-- Code found on https://github.com/danweller18/devise/wiki/Allow-Users-to-View-Profile-and-List-All-Users
+     And in Ruby on Rails Tutorial by Michael Hartl https://www.railstutorial.org/book/updating_and_deleting_users -->
+
+<div class="history">
+    <h2>Users</h2>
+  
+  <%= will_paginate %>
+    <ul class ="users"> 
+        <% @users.each do |user| %>
+        <li>
+          <%= user.name %><br/>
+          <%= user.delivery_address %><br/>
+          <%= user.email %><br/>
+        </li>
+        <% end %>
+    </ul> 
+  <%= will_paginate %>
+</div>
