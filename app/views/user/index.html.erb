@@ -9,8 +9,11 @@
         <li>
           <%= user.name %><br/>
           <%= user.delivery_address %><br/>
-          <%= user.email %><br/>
+          <%= user.email %>
+          <%= link_to "Delete Registered User",admin_destroy_user_path(user), method: :delete, data: { confirm: "Delete User?" } %>
+           <!--Destroy User Code found at Stack Overflow http://stackoverflow.com/questions/16289299/rails-how-to-destroy-users-created-under-devise-->
         </li>
+         
         <% end %>
     </ul> 
   <%= will_paginate @users %>

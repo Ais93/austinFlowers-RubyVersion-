@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   
   match '/users',   to: 'user#index',   via: 'get'
   
+#Destroy User Code found at Stack Overflow http://stackoverflow.com/questions/16289299/rails-how-to-destroy-users-created-under-devise
+  
+  match 'users/:id' => 'user#destroy', :via => :delete, :as => :admin_destroy_user
+  
   get 'bouquet'     =>    'flower_pages#bouquet'
 
   get 'anniversary' =>    'flower_pages#anniversary'

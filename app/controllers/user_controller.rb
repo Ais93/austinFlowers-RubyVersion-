@@ -6,4 +6,14 @@ class UserController < ApplicationController
   def index
     @users = User.paginate(page: params[:page],per_page: 8)
   end
+ 
+#Destroy User Code found at Stack Overflow http://stackoverflow.com/questions/16289299/rails-how-to-destroy-users-created-under-devise-->  
+  def destroy
+      @user = User.find(params[:id])
+      @user.destroy
+
+      if @user.destroy
+        redirect_to users_path
+      end
+  end
 end
