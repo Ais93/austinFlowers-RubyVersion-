@@ -326,6 +326,15 @@ body {
 		text-decoration: none;
 		text-transform: uppercase;
    	}
+   	ul {
+   		list-style: none;
+   		margin: 20px;
+   		font-weight:700;
+   		li {
+   			padding-top: 10px;
+   			border-bottom: 1px solid #D27D65 ;
+   		}
+   	}
 }
 
 

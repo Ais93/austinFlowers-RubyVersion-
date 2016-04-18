@@ -15,9 +15,13 @@
 				<% if user_signed_in? %>
 				<li><%= link_to 'Profile', edit_user_registration_path %></li>
 				<li><%= link_to'Logout', destroy_user_session_path %></li>
+				<% else if admin_signed_in? %>
+				<li><%= link_to 'Users', users_path %></li>
+				<li><%= link_to'Logout', destroy_admin_session_path %></li>
 				<% else %>
 				<li><%= link_to 'Register', new_user_registration_path %></li>
 				<li><%= link_to 'Sign In',	new_user_session_path %></li>
+				<% end %>
 				<% end %>
 		</ul>
 		<!--W3Schools Example on Modal Boxes http://www.w3schools.com/howto/howto_css_modals.asp -->
