@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root                    'home_pages#home'
   
+  match 'users/:id' => 'user#show', :via => :get, :as => :user
+  
   match '/users',   to: 'user#index',   via: 'get'
   
 #Destroy User Code found at Stack Overflow http://stackoverflow.com/questions/16289299/rails-how-to-destroy-users-created-under-devise
