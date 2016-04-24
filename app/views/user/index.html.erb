@@ -10,7 +10,7 @@
           <%= user.name %><br/>
           <%= user.delivery_address %><br/>
           <%= user.email %>
-          <%= link_to "Delete Registered User",admin_destroy_user_path(user), method: :delete, data: { confirm: "Delete User?" } %>
+          <%= link_to "Delete Registered User",admin_destroy_user_path(user), method: :delete %>
            <!--Destroy User Code found at Stack Overflow http://stackoverflow.com/questions/16289299/rails-how-to-destroy-users-created-under-devise-->
         </li>
          

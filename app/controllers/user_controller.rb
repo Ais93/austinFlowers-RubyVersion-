@@ -7,7 +7,7 @@ class UserController < ApplicationController
     @users = User.paginate(page: params[:page],per_page: 8)
   end
   
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:index,:destroy]
   def show
     @user = User.find(params[:id])
   end
