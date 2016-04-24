@@ -1,1 +1,7 @@
-<%= @user.name %>
+<div class ="history">
+    <h2> Profile </h2>
+        Name: <%= @user.name %>
+        Delivery Address: <%= @user.delivery_address %>
+        Email: <%= @user.email %>
+        <%= link_to "Edit Profile", edit_user_registration_path %>
+</div>
