@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   get 'custom'      =>    'flower_pages#custom'
 
   get 'funeral'     =>    'products#funeral'
+  
+  match 'products/:id' => 'products#show', :via => :get
 
   get 'terms'       =>    'home_pages#terms'
 

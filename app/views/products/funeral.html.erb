@@ -1,12 +1,12 @@
-<!--Code Tutorial by Martins Tutorial - Ruby on Rails Shopping Cart Tutorial
-https://www.youtube.com/watch?v=4OPdxPawXrw -->
+<!--Code Tutorial by Karim El Husseiny - Build an Online Store
+http://www.sitepoint.com/build-online-store-rails/-->
 <div class="column">
 	<h1>Funeral</h1>
 	<ul>
 		<% @products.where(category: "funeral").each do |product| %>
 			<li class="medium-3 columns">
 					<%= link_to '#', class: "flowers" do %>
-           				<%= image_tag product.flowers %>
+           				<%= image_tag product.flowers%>
        				<% end %>
        				<a class ="cartButton" href = "/cart/<%= product.id %>">Add to Cart</a>
 			</li>
@@ -16,3 +16,10 @@ https://www.youtube.com/watch?v=4OPdxPawXrw -->
 
 <div style="clear:both;"></div>	
 	
+<script>
+	
+		$('#d11').contenthover({
+			overlay_background:'#000',
+			overlay_opacity:0.8
+		});
+</script>

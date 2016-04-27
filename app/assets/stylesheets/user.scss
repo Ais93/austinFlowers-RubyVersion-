@@ -46,7 +46,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
    	}
-   	ul {
+   	ul.users {
    		list-style: none;
    		margin: 20px;
    		font-weight:700;
@@ -60,9 +60,14 @@
    			float:right;
    		}
    	}
+   	ul.profile {
+   		list-style: none;
+   		margin: 10px;
+   		font-size:25px;
+   		li {
+   			padding:10px;
+   		}
+   	}
 }
 
-.profile {
-	text-decoration: none;
-	border: 2px solid black;
-}
+
