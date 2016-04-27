@@ -1,35 +1,23 @@
 /*CSS for the flower pages : bouquet anniversary funeral */
-.purchase{
+.column{
 	padding-top: 40px;
-	padding-left:110px;
- 	width:860px;
- 	height: 400px;
- 	margin:auto;
-}
-
-.purchase ul {
+ 	width: 960px;
+ 	height: 1000px;
+ 	margin-left: 160px;
+ 	font-family:Lato;
+ 	ul {
 	list-style:none;
-}
- 
-.purchase li {
+	}
+	li {
  	height: 250px;
  	width: 150px;
-	float:left;
-	margin: 10px;
-	margin-bottom: 50px;
+	margin: 0 20px 50px;
+	}
+	h1 {
+		text-align:center;
+	}
 }
-  
-.purchase img {
-	display:block;
-}
-  
-  
-.btn-cart {
-	  display:block;
-	  margin:auto;
-	  
-}
-  
+ 
 .cart ul {
 	  list-style:none;
 }

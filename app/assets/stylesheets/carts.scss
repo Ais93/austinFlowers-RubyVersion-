@@ -1,0 +1,40 @@
+#cart {
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px #888888;
+    background-color: #D27D65;
+    border-radius: 5px;
+    font-size:20px;
+    width:50%;
+    font-weight:400;
+}
+
+#total {
+    font-size: 35px;
+    text-align:center;
+}
+
+.empty {
+    color:black;
+    font-size:25px;
+    float:right;
+    margin-right:25px;
+}
+
+.no_prod {
+    text-align:center;
+    font-size:55px;
+}
+
+.cartButton {
+		background-color: green;
+		border: 1px solid #4D4D4D;
+		border-radius:5px;
+		cursor: pointer;
+		color: white;
+		font-size: 15px;
+		text-decoration: none;
+		text-transform: uppercase;
+}
+
+

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admins
   devise_for :users, { sessions: "users/sessions" }
 
@@ -12,13 +13,21 @@ Rails.application.routes.draw do
   
   match 'users/:id' => 'user#destroy', :via => :delete, :as => :admin_destroy_user
   
-  get 'bouquet'     =>    'flower_pages#bouquet'
+#Code Tutorial by Martins Tutorial - Ruby on Rails Shopping Cart Tutorial
+#https://www.youtube.com/watch?v=4OPdxPawXrw 
+  get 'cart'        =>    'carts#show'
+  
+  get 'cart/clear'  =>    'carts#clearCart'
+  
+  get 'cart/:id'  =>    'carts#add'
+  
+  get 'bouquet'     =>    'products#bouquet'
 
-  get 'anniversary' =>    'flower_pages#anniversary'
+  get 'anniversary' =>    'products#anniversary'
 
   get 'custom'      =>    'flower_pages#custom'
 
-  get 'funeral'     =>    'flower_pages#funeral'
+  get 'funeral'     =>    'products#funeral'
 
   get 'terms'       =>    'home_pages#terms'
 

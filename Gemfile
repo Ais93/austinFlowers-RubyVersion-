@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.2'
 #Log in and registration, authentication
 gem 'devise'
+#Used for creating grid design for products
+gem 'foundation-rails'
 # Create users
 gem 'faker',                '1.4.2'
 # Only allows certain number of users on each page (Michael Hartl - Ruby on Rails Tutorial)

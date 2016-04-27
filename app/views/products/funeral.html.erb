@@ -1,0 +1,18 @@
+<!--Code Tutorial by Martins Tutorial - Ruby on Rails Shopping Cart Tutorial
+https://www.youtube.com/watch?v=4OPdxPawXrw -->
+<div class="column">
+	<h1>Funeral</h1>
+	<ul>
+		<% @products.where(category: "funeral").each do |product| %>
+			<li class="medium-3 columns">
+					<%= link_to '#', class: "flowers" do %>
+           				<%= image_tag product.flowers %>
+       				<% end %>
+       				<a class ="cartButton" href = "/cart/<%= product.id %>">Add to Cart</a>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+<div style="clear:both;"></div>	
+	

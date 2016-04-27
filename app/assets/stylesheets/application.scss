@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+//= require foundation_and_overrides
+
  */
 body {
 	margin: 0;
@@ -188,7 +190,7 @@ footer {
 		padding-bottom: 10px;
 		font-style: italic;
 	}
-	.columns {
+	.footer-columns {
 		text-align: center;
 		margin-right: 50px;
 		margin-top: 20px;
