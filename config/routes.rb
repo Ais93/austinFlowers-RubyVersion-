@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   
   get 'cart/clear'  =>    'carts#clearCart'
   
-  get 'cart/:id'  =>    'carts#add'
+  get 'cart/:id'  =>      'carts#add'
+  
+  get 'product/:id' =>    'products#show',:as => :product
   
   get 'bouquet'     =>    'products#bouquet'
 
@@ -29,8 +31,6 @@ Rails.application.routes.draw do
 
   get 'funeral'     =>    'products#funeral'
   
-  match 'products/:id' => 'products#show', :via => :get
-
   get 'terms'       =>    'home_pages#terms'
 
   # The priority is based upon order of creation: first created -> highest priority.
