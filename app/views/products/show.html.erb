@@ -1,6 +1,9 @@
 <div class ="history">
-
-    <ul class="profile">
-     <li class="profile">Name: <%= @product.name %></li>
-
+<h2><%= @product.name.humanize %></h2>
+    <ul class="more">
+		<%= image_tag @product.big_image, :class => "big_image" %>
+         <li id="description"><%= @product.description %></li>
+         <li class="more"><%= number_to_currency(@product.price, :unit => '€') %></li>
+         <a class ="cartButton" href = "/cart/<%= @product.id %>">Add to Cart</a>
+    </ul>
 </div>

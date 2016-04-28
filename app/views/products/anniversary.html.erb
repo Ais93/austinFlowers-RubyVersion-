@@ -5,7 +5,7 @@ http://www.sitepoint.com/build-online-store-rails/-->
 	<ul>
 		<% @products.where(category: "anniversary").each do |product| %>
 			<li class="medium-3 columns">
-					<%= link_to '#', class: "flowers" do %>
+					<%= link_to product_path(product.id), class: "flowers" do %>
            				<%= image_tag product.flowers %>
        				<% end %>
        				<a class ="cartButton" href = "/cart/<%= product.id %>">Add to Cart</a>

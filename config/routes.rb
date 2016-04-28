@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   root                    'home_pages#home'
   
+  
   match 'users/:id' => 'user#show', :via => :get, :as => :user
   
   match '/users',   to: 'user#index',   via: 'get'
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   
   get 'cart/:id'  =>      'carts#add'
   
-  get 'product/:id' =>    'products#show',:as => :product
+  get 'product/:id' =>    'products#show', :as => :product
   
   get 'bouquet'     =>    'products#bouquet'
 

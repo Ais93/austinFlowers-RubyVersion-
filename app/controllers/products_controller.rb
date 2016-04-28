@@ -1,17 +1,19 @@
 class ProductsController < ApplicationController
   def bouquet
-    @product = Product.all
+    @products = Product.all
   end
 
   def anniversary
-    @product = Product.all
+    @products = Product.all
   end
 
   def funeral
-    @product = Product.all
+    @products = Product.all
   end
   
   def show
-    @product = Product.find(product.id)
+    @product = Product.find(params[:id])
   end
+  
+
 end
