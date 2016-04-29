@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428014321) do
+ActiveRecord::Schema.define(version: 20160429092105) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",               default: "", null: false
@@ -29,37 +29,30 @@ ActiveRecord::Schema.define(version: 20160428014321) do
     t.datetime "remember_created_at"
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "order_items", force: :cascade do |t|
     t.integer  "product_id"
-    t.integer  "order_id"
-    t.decimal  "unit_price",  precision: 12, scale: 3
-    t.integer  "quantity"
-    t.decimal  "total_price", precision: 12, scale: 3
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.integer  "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "order_items", ["order_id"], name: "index_order_items_on_order_id"
+  add_index "order_items", ["cart_id"], name: "index_order_items_on_cart_id"
   add_index "order_items", ["product_id"], name: "index_order_items_on_product_id"
-
-  create_table "orders", force: :cascade do |t|
-    t.decimal  "subtotal",   precision: 12, scale: 3
-    t.decimal  "tax",        precision: 12, scale: 3
-    t.decimal  "shipping",   precision: 12, scale: 3
-    t.decimal  "total",      precision: 12, scale: 3
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.float    "price"
-    t.text     "description"
+    t.decimal  "price"
     t.string   "category"
     t.string   "image"
+    t.text     "description"
+    t.string   "big_image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "big_image"
   end
 
   create_table "users", force: :cascade do |t|

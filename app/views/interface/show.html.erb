@@ -1,0 +1,9 @@
+<div class ="history">
+<h2><%= @interface.name.titleize %></h2>
+    <ul class="more">
+		<%= image_tag @interface.big_image, :class => "big_image" %>
+         <li id="description"><%= @interface.description %></li>
+         <li class="more"><%= number_to_currency(@interface.price, :unit => '€') %></li>
+    </ul>
+</div>
+

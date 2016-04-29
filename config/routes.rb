@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  resources :order_items
+  resources :carts
   devise_for :admins
   devise_for :users, { sessions: "users/sessions" }
 
@@ -14,24 +15,18 @@ Rails.application.routes.draw do
   
   match 'users/:id' => 'user#destroy', :via => :delete, :as => :admin_destroy_user
   
-#Code Tutorial by Martins Tutorial - Ruby on Rails Shopping Cart Tutorial
-#https://www.youtube.com/watch?v=4OPdxPawXrw 
-  get 'cart'        =>    'carts#show'
+  resources :products
   
-  get 'cart/clear'  =>    'carts#clearCart'
+  resources :interface
   
-  get 'cart/:id'  =>      'carts#add'
-  
-  get 'product/:id' =>    'products#show', :as => :product
-  
-  get 'bouquet'     =>    'products#bouquet'
+  get 'bouquet'     =>    'interface#bouquet'
 
-  get 'anniversary' =>    'products#anniversary'
+  get 'anniversary' =>    'interface#anniversary'
 
   get 'custom'      =>    'flower_pages#custom'
 
-  get 'funeral'     =>    'products#funeral'
-  
+  get 'funeral'     =>    'interface#funeral'
+
   get 'terms'       =>    'home_pages#terms'
 
   # The priority is based upon order of creation: first created -> highest priority.
