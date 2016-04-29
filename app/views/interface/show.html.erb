@@ -4,6 +4,10 @@
 		<%= image_tag @interface.big_image, :class => "big_image" %>
          <li id="description"><%= @interface.description %></li>
          <li class="more"><%= number_to_currency(@interface.price, :unit => '€') %></li>
+        <!--#Reference: Agile Web Development with Rails 4
+		#Sam Ruby, Dave Thomas, David Heinemeier Hansson
+	    #Chapter 9: Cart Creation -->
+       	<%= button_to 'Add To Cart', order_items_path(product_id: product), :class => "cartButton" %>
     </ul>
 </div>
 
