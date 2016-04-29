@@ -11,7 +11,8 @@ http://www.sitepoint.com/build-online-store-rails/-->
        				<!--#Reference: Agile Web Development with Rails 4
 						#Sam Ruby, Dave Thomas, David Heinemeier Hansson
 						#Chapter 9: Cart Creation -->
-       				<%= button_to 'Add To Cart', order_items_path(product_id: product), :class => "cartButton" %>
+       				<%= button_to 'Add To Cart', order_items_path(product_id: product),:class => "cartButton",
+       					remote: true  %>
        		</li>
        		
 		<% end %>

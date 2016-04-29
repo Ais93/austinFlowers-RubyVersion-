@@ -1,4 +1,7 @@
 class InterfaceController < ApplicationController
+   include CurrentCart
+   before_action :set_cart
+  
   def bouquet
     @interface = Product.all
   end

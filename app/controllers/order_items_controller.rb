@@ -32,15 +32,16 @@ class OrderItemsController < ApplicationController
   # POST /order_items.json
   def create
     product = Product.find(params[:product_id])
-#calls on the new method created in the cart model to see if product is in cart already
+  #calls on the new method created in the cart model to see if product is in cart already
     @order_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @order_item.save
-        format.html { redirect_to @order_item.cart}
-        format.json { render :show, status: :created, location: @order_item }
+        format.html { redirect_to interface_url}
+        format.js
+        format.json { render action :show, status: :created, location: @order_item }
       else
-        format.html { render :new }
+        format.html { render action :new }
         format.json { render json: @order_item.errors, status: :unprocessable_entity }
       end
     end

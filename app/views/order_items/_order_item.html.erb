@@ -1,0 +1,3 @@
+<li><b><%= order_item.product.name.titleize %></b></li>
+<li>Quantity:<%= order_item.quantity %></li>
+<li id="price"><%= number_to_currency(order_item.total_price, :unit => '€') %></li>

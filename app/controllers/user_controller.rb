@@ -1,4 +1,6 @@
 class UserController < ApplicationController
+include CurrentCart
+ before_action :set_cart
   #Code found in Ruby on Rails Tutorial by Michael Hartl
   #Chapter 9. Listing 9.42
   #https://www.railstutorial.org/book/updating_and_deleting_users
