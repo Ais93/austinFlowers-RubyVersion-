@@ -4,6 +4,9 @@
      <li class="profile">Name: <%= @user.name %></li>
      <li class="profile">Delivery Address: <%= @user.delivery_address %></li>
      <li class="profile">Email: <%= @user.email %></li>
-     <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+     <li><%= link_to "Edit Profile", '#' %></li>
     </ul>
 </div>
+
+<!--Edit profile and displaying the cart at the same time would not work. before_action set_cart did
+    not work with devise controllers -->

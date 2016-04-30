@@ -1,7 +1,11 @@
 <!--Code Tutorial by Karim El Husseiny - Build an Online Store
 http://www.sitepoint.com/build-online-store-rails/-->
 <div class="column">
-	<h1>Bouquets</h1>
+	<% if user_signed_in? %>
+		<h1>Bouquets</h1>
+	<% else %>
+		<h1>Bouquets | <%= link_to "Sign In To Purchase",new_user_session_path %></h1>
+	<% end %>
 	<ul>
 		<% @interface.where(category: "bouquet").each do |product| %>
 			<li class="medium-3 columns">
@@ -11,8 +15,8 @@ http://www.sitepoint.com/build-online-store-rails/-->
        				<!--#Reference: Agile Web Development with Rails 4
 						#Sam Ruby, Dave Thomas, David Heinemeier Hansson
 						#Chapter 9: Cart Creation -->
-       				<%= button_to 'Add To Cart', order_items_path(product_id: product),:class => "cartButton",
-       					remote: true  %>
+       				<%= button_to 'Add To Cart', order_items_path(product_id: product),
+       					remote: true, :class => "cartButton" %>
        		</li>
        		
 		<% end %>

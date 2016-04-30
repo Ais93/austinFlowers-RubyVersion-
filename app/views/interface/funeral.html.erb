@@ -1,16 +1,22 @@
 <div class="column">
-	<h1>Funeral</h1>
+	<% if user_signed_in? %>
+		<h1>Funeral</h1>
+	<% else %>
+		<h1>Funeral |  <%= link_to "Sign In To Purchase",new_user_session_path %></h1>
+	<% end %>
 	<ul>
 		<% @interface.where(category: "funeral").each do |product| %>
 			<li class="medium-3 columns">
-					<%= link_to interface_path(product.id), class: "flowers" do %>
+				<%= link_to interface_path(product.id), class: "flowers" do %>
            				<%= image_tag product.flowers %>
        				<% end %>
        				<!--#Reference: Agile Web Development with Rails 4
 						#Sam Ruby, Dave Thomas, David Heinemeier Hansson
 						#Chapter 9: Cart Creation -->
+       				<% if user_signed_in? %>
        				<%= button_to 'Add To Cart', order_items_path(product_id: product),
        					remote: true, :class => "cartButton" %>
+       				<% end %>
 			</li>
 			
 		<% end %>
